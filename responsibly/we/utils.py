@@ -8,13 +8,11 @@ from six import string_types
 from sklearn.cluster import KMeans
 from sklearn.manifold import TSNE
 from sklearn.metrics import accuracy_score
+from gensim.models import KeyedVectors
 
-
-WORD_EMBEDDING_MODEL_TYPES = (gensim.models.keyedvectors.KeyedVectors,
-                              gensim.models.keyedvectors.BaseKeyedVectors,
+WORD_EMBEDDING_MODEL_TYPES = (KeyedVectors,
                               gensim.models.fasttext.FastText,
-                              gensim.models.word2vec.Word2Vec,
-                              gensim.models.base_any2vec.BaseWordEmbeddingsModel,)  # pylint: disable=line-too-long
+                              gensim.models.word2vec.Word2Vec,)  # pylint: disable=line-too-long
 
 
 def round_to_extreme(value, digits=2):
